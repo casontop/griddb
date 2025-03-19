@@ -1,0 +1,96 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "South Bronx Paid Script",
+   Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
+   LoadingTitle = "PAIDZ",
+   LoadingSubtitle = "by Cas Aka unkieo",
+   Theme = "Ocean", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+
+   DisableRayfieldPrompts = false,
+   DisableBuildWarnings = false, -- Prevents Rayfield from warning when the script has a version mismatch with the interface
+
+   ConfigurationSaving = {
+      Enabled = false,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Unkieoz"
+   },
+
+   Discord = {
+      Enabled = false, -- Prompt the user to join your Discord server if their executor supports it
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+
+   KeySystem = true, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Key",
+      Subtitle = "Key System'",
+      Note = "Buy key add unkieo on discord", -- Use this to tell the user how to get a key
+      FileName = "SouthBronxKey", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = false, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = true, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"KEY1132"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local Tab = Window:CreateTab("🍟Auto chip🍟",nil) -- Title, Image
+local Section = Tab:CreateSection("Click this Only if you're in the factory")
+local Button = Tab:CreateButton({
+   Name = "AutoFarm Chip",
+   Callback = function()
+  -- The function that takes place when the button is pressed
+   end,
+})
+
+local Slider = Tab:CreateSlider({
+   Name = "Speed on how fast you want you walk / do the things (only for AuToFarm Chip)",
+   Range = {0, 100},
+   Increment = 10,
+   Suffix = "Speed",
+   CurrentValue = 10,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the slider changes
+   -- The variable (Value) is a number which correlates to the value the slider is currently at
+  end,
+})
+
+local Tab = Window:CreateTab("💳Auto Card💳",nil) -- Title, Image
+local Section = Tab:CreateSection("Auto Card Do all thing goes to open atm also")
+local Button = Tab:CreateButton({
+   Name = "AutoFarm Card",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+  end,
+})
+
+local Tab = Window:CreateTab("🚗Auto CarRob🚗",nil) -- Title, Image
+local Section = Tab:CreateSection("Auto car robs and sells (Only Click it 1 time")
+local Button = Tab:CreateButton({
+   Name = "Auto car rob",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+  end,
+})
+
+local Tab = Window:CreateTab("🎰Auto casino🎰",nil) -- Title, Image
+local Section = Tab:CreateSection("Auto casino does everything auto buy bag (only click 1 time you can do auto farm while this is on")
+local Button = Tab:CreateButton({
+   Name = "Auto casino",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+  end,
+})
+
+local Tab = Window:CreateTab("🌌Teleports🌌",nil) -- Title, Image
+local Dropdown = Tab:CreateDropdown({
+   Name = "Teleports",
+   Options = {"Dealership","Apartment","Casino","Gun1","Gun2"},
+   CurrentOption = {"Option 1"},
+   Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Options)
+   -- The function that takes place when the selected option is changed
+   -- The variable (Options) is a table of strings for the current selected options
+   end,
+})
